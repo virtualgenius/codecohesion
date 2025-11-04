@@ -5,9 +5,10 @@
 ## 🔒 PROPRIETARY DATA PROTECTION
 
 **NEVER add proprietary Zero repository data to this directory:**
-- ❌ `assessor-svc*` (PROPRIETARY)
-- ❌ `core-data-svc*` (PROPRIETARY)
-- ❌ `public-web*` (PROPRIETARY)
+- ❌ `assessor-svc*` (PROPRIETARY - Zero)
+- ❌ `core-data-svc*` (PROPRIETARY - Zero)
+- ❌ `public-web*` (PROPRIETARY - Zero)
+- ❌ `editor*` (PROPRIETARY - Zero)
 
 ## ✅ Safe Public Repositories
 
@@ -15,7 +16,6 @@ Only these open-source projects may be added:
 - cbioportal (open source)
 - cbioportal-frontend (open source)
 - codecohesion (open source)
-- editor (open source)
 - gource (open source)
 - react (open source)
 - test-generated (synthetic test data)

@@ -21,8 +21,8 @@ ACTUAL_FILES=$(find "$DATA_DIR" -name "*.json" -type f -exec basename {} \; | so
 # Get list of allowed files (skip comments and empty lines)
 ALLOWED_FILES=$(grep -v '^#' "$SAFE_LIST" | grep -v '^$' | grep '\.json$' | sort)
 
-# Check for proprietary files
-BLOCKED_PATTERNS=("assessor-svc" "core-data-svc" "public-web")
+# Check for proprietary files (ZERO PROPRIETARY - NEVER DEPLOY)
+BLOCKED_PATTERNS=("assessor-svc" "core-data-svc" "public-web" "editor")
 
 for file in $ACTUAL_FILES; do
   for pattern in "${BLOCKED_PATTERNS[@]}"; do
