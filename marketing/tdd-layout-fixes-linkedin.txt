@@ -1,8 +1,0 @@
-Yesterday I started experimenting with Claude Code doing TDD for new features and bug fixes, and refactoring to pure functions for existing code that needed tidying. This morning I pushed the results. https://github.com/paulrayner/codecohesion/blob/main/CHANGELOG.md
-
-The video shows this morning's single TDD cycle fixing a file node overlap bug in the 2D force-directed layout. I didn't add audio or voiceover (play some cool music yourself while you watch). 
-
-Claude Code made mistakes and went down wrong paths, but worked through analysing the bug, fixing it, updating docs, making commits and pushing to GitHub. The fix this morning was somewhat trivial. But the cleanup work we've been doing very much fits Kent Beck's: "for each desired change, make the change easy (warning: this may be hard), then make the easy change"
-
----
-Thanks to Thomas Perrian, Ferdi, Marco, Marco II, others mentioned in prior comments
