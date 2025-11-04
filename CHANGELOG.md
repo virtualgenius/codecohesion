@@ -28,7 +28,7 @@
 
 - CodeCohesion REST API (Milestone 1) with 8 endpoints for repository analysis data
 - API deployed to Railway at https://codecohesion-api-production.up.railway.app
-- Production data for 6 repositories (cbioportal, cbioportal-frontend, codecohesion, editor, gource, react)
+- Production data for public open-source repositories
 - API endpoints: /api/repos, /api/repos/:id/stats, /api/repos/:id/contributors, /api/repos/:id/files, /api/repos/:id/hotspots
 - CORS enabled for all origins to support external app integration
 - Support for both static snapshots and timeline-v2 formats

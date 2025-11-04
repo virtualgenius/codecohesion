@@ -6,6 +6,7 @@ set -e
 
 SAFE_LIST="public/data/SAFE_REPOS.txt"
 DATA_DIR="public/data"
+PROPRIETARY_LIST=".proprietary-repos.txt"
 
 echo "🔒 Validating data files before deployment..."
 
@@ -15,14 +16,27 @@ if [ ! -f "$SAFE_LIST" ]; then
   exit 1
 fi
 
+# Check if proprietary patterns list exists
+if [ ! -f "$PROPRIETARY_LIST" ]; then
+  echo "❌ ERROR: .proprietary-repos.txt not found!"
+  echo "   Create this file with proprietary repo patterns (one per line)"
+  exit 1
+fi
+
 # Get list of actual JSON files
 ACTUAL_FILES=$(find "$DATA_DIR" -name "*.json" -type f -exec basename {} \; | sort)
 
 # Get list of allowed files (skip comments and empty lines)
 ALLOWED_FILES=$(grep -v '^#' "$SAFE_LIST" | grep -v '^$' | grep '\.json$' | sort)
 
-# Check for proprietary files (ZERO PROPRIETARY - NEVER DEPLOY)
-BLOCKED_PATTERNS=("assessor-svc" "core-data-svc" "public-web" "editor")
+# Load proprietary patterns from gitignored config file
+BLOCKED_PATTERNS=()
+while IFS= read -r pattern; do
+  # Skip comments and empty lines
+  [[ "$pattern" =~ ^#.*$ ]] && continue
+  [[ -z "$pattern" ]] && continue
+  BLOCKED_PATTERNS+=("$pattern")
+done < "$PROPRIETARY_LIST"
 
 for file in $ACTUAL_FILES; do
   for pattern in "${BLOCKED_PATTERNS[@]}"; do
