@@ -562,25 +562,19 @@ function updateStatsDisplay(snapshot: RepositorySnapshot) {
  */
 function updateHideGeneratedCheckbox(snapshot: RepositorySnapshot) {
   const generatedCount = countGeneratedFiles(snapshot.tree);
-  const checkboxLabel = document.querySelector('label[for="hide-generated-checkbox"]');
+  const checkbox = document.getElementById('hide-generated-checkbox') as HTMLInputElement;
+  const toggleLabel = checkbox?.closest('.toggle-label');
+  const labelSpan = toggleLabel?.querySelector('span:not(.toggle-slider)');
 
-  if (!checkboxLabel) {
-    // If no label exists, find the checkbox and add text after it
-    const checkbox = document.getElementById('hide-generated-checkbox');
-    if (checkbox && checkbox.nextSibling) {
-      const textNode = checkbox.nextSibling;
-      if (textNode.nodeType === Node.TEXT_NODE) {
-        if (generatedCount > 0) {
-          textNode.textContent = ` Hide generated files (${generatedCount} found)`;
-        } else {
-          textNode.textContent = ' Hide generated files';
-        }
-      }
+  if (labelSpan) {
+    if (generatedCount > 0) {
+      labelSpan.textContent = `Hide generated files (${generatedCount} found)`;
+    } else {
+      labelSpan.textContent = 'Hide generated files';
     }
   }
 
   // Disable checkbox if no generated files
-  const checkbox = document.getElementById('hide-generated-checkbox') as HTMLInputElement;
   if (checkbox) {
     checkbox.disabled = generatedCount === 0;
     if (generatedCount === 0) {
@@ -645,7 +639,7 @@ function populateStatsForFilteredTree(tree: DirectoryNode) {
 }
 
 /**
- * Update statistics panel from tree (for Timeline V2 where we don't have a full snapshot)
+ * Update statistics panel from tree (for Timeline where we don't have a full snapshot)
  */
 function updateStatsForTree(tree: DirectoryNode, commitIndex?: number, totalCommits?: number) {
   // Count files and calculate total LOC
@@ -786,7 +780,7 @@ function hideLoading() {
 let currentVisualizer: TreeVisualizer | null = null;
 let currentSnapshot: RepositorySnapshot | null = null;
 let currentTimelineData: TimelineData | null = null; // Timeline V1 format if loaded
-let currentDeltaController: DeltaReplayController | null = null; // Timeline V2 controller
+let currentDeltaController: DeltaReplayController | null = null; // Timeline controller
 let commitToFilesIndex: Map<string, FileNode[]> = new Map();
 let highlightCommitEnabled: boolean = true;
 let currentHighlightedCommit: string | null = null;
@@ -862,9 +856,9 @@ function updateRepoGitHubLink(repoBaseName: string): void {
 
 let pathToFileIndex: Map<string, FileNode> = new Map();
 
-// Timeline V2 compatible color modes (only modes that work without lifetime analytics)
+// Timeline compatible color modes (only modes that work without lifetime analytics)
 // Note: 'cluster' mode is HEAD-only since clusters represent current architectural boundaries
-const TIMELINE_V2_COMPATIBLE_MODES: ColorMode[] = ['fileType', 'lastModified', 'author'];
+const TIMELINE_COMPATIBLE_MODES: ColorMode[] = ['fileType', 'lastModified', 'author'];
 
 // Store original color mode when entering timeline mode
 let savedColorModeBeforeTimeline: ColorMode | null = null;
@@ -878,21 +872,15 @@ const originalColorModeOptionText = new Map<string, string>();
 function enableTimelineMode() {
   // Hide "Highlight Commit" toggle (not applicable in timeline mode)
   const highlightToggle = document.getElementById('highlight-commit-toggle');
-  const highlightLabel = highlightToggle?.previousElementSibling as HTMLElement;
-  if (highlightToggle) {
-    highlightToggle.style.display = 'none';
-  }
-  if (highlightLabel && highlightLabel.textContent?.includes('Highlight Commit')) {
+  const highlightLabel = highlightToggle?.closest('.toggle-label') as HTMLElement;
+  if (highlightLabel) {
     highlightLabel.style.display = 'none';
   }
 
   // Hide "View Mode" toggle (not applicable in timeline mode - timeline shows all depths)
   const viewModeToggle = document.getElementById('view-mode-toggle');
-  const viewModeLabel = viewModeToggle?.previousElementSibling as HTMLElement;
-  if (viewModeToggle) {
-    viewModeToggle.style.display = 'none';
-  }
-  if (viewModeLabel && viewModeLabel.textContent?.includes('View')) {
+  const viewModeLabel = viewModeToggle?.closest('.toggle-label') as HTMLElement;
+  if (viewModeLabel) {
     viewModeLabel.style.display = 'none';
   }
 
@@ -915,7 +903,7 @@ function enableTimelineMode() {
         originalColorModeOptionText.set(mode, option.outerHTML);
       }
 
-      if (!TIMELINE_V2_COMPATIBLE_MODES.includes(mode)) {
+      if (!TIMELINE_COMPATIBLE_MODES.includes(mode)) {
         optionsToRemove.push(option);
       }
     });
@@ -924,7 +912,7 @@ function enableTimelineMode() {
     optionsToRemove.forEach(option => option.remove());
 
     // If current mode is incompatible, switch to fileType
-    if (!TIMELINE_V2_COMPATIBLE_MODES.includes(savedColorModeBeforeTimeline)) {
+    if (!TIMELINE_COMPATIBLE_MODES.includes(savedColorModeBeforeTimeline)) {
       colorModeSelector.value = 'fileType';
       localStorage.setItem('colorMode', 'fileType');
       if (currentVisualizer) {
@@ -941,20 +929,14 @@ function enableTimelineMode() {
 function disableTimelineMode() {
   // Show "Highlight Commit" toggle
   const highlightToggle = document.getElementById('highlight-commit-toggle');
-  const highlightLabel = highlightToggle?.previousElementSibling as HTMLElement;
-  if (highlightToggle) {
-    highlightToggle.style.display = '';
-  }
+  const highlightLabel = highlightToggle?.closest('.toggle-label') as HTMLElement;
   if (highlightLabel) {
     highlightLabel.style.display = '';
   }
 
   // Show "View Mode" toggle
   const viewModeToggle = document.getElementById('view-mode-toggle');
-  const viewModeLabel = viewModeToggle?.previousElementSibling as HTMLElement;
-  if (viewModeToggle) {
-    viewModeToggle.style.display = '';
-  }
+  const viewModeLabel = viewModeToggle?.closest('.toggle-label') as HTMLElement;
   if (viewModeLabel) {
     viewModeLabel.style.display = '';
   }
@@ -987,7 +969,7 @@ function disableTimelineMode() {
       }
 
       // Restore previous color mode if it was changed
-      if (savedColorModeBeforeTimeline && !TIMELINE_V2_COMPATIBLE_MODES.includes(savedColorModeBeforeTimeline)) {
+      if (savedColorModeBeforeTimeline && !TIMELINE_COMPATIBLE_MODES.includes(savedColorModeBeforeTimeline)) {
         colorModeSelector.value = savedColorModeBeforeTimeline;
         localStorage.setItem('colorMode', savedColorModeBeforeTimeline);
         if (currentVisualizer) {
@@ -1004,13 +986,13 @@ function disableTimelineMode() {
 }
 
 /**
- * Load Timeline V2 (Full Delta) format
+ * Load Timeline (Full Delta) format
  */
-async function loadTimelineV2(data: TimelineDataV2, repoName: string) {
+async function loadTimeline(data: TimelineDataV2, repoName: string) {
   const loading = document.getElementById('loading');
 
   try {
-    console.log(`\n=== LOADING TIMELINE V2 ===`);
+    console.log(`\n=== LOADING TIMELINE ===`);
     console.log(`Repository: ${data.repositoryPath}`);
     console.log(`Total commits: ${data.metadata.totalCommits}`);
     console.log(`Date range: ${data.metadata.dateRange.first.substring(0, 10)} to ${data.metadata.dateRange.last.substring(0, 10)}`);
@@ -1170,10 +1152,10 @@ async function loadTimelineV2(data: TimelineDataV2, repoName: string) {
 
     // Load first tree
     currentVisualizer.visualize(firstTree);
-    currentVisualizer.setTimelineMode('v2');
+    currentVisualizer.setTimelineMode('delta');
 
     // Set up V2 playback controls
-    setupTimelineV2Controls();
+    setupTimelineControls();
 
     // Repository name is shown in dropdown only (no separate header element)
 
@@ -1246,10 +1228,10 @@ async function loadTimelineV2(data: TimelineDataV2, repoName: string) {
     // Enable Timeline mode UI
     enableTimelineMode();
 
-    console.log('\n✅ Timeline V2 loaded successfully!\n');
+    console.log('\n✅ Timeline loaded successfully!\n');
 
   } catch (error) {
-    console.error('Error loading Timeline V2:', error);
+    console.error('Error loading Timeline:', error);
     if (loading) {
       loading.innerHTML = `<p style="color: red;">Error loading timeline: ${error}</p>`;
     }
@@ -1261,12 +1243,12 @@ async function loadTimelineV2(data: TimelineDataV2, repoName: string) {
 }
 
 /**
- * Set up Timeline V2 playback controls
+ * Set up Timeline playback controls
  */
-function setupTimelineV2Controls() {
+function setupTimelineControls() {
   if (!currentDeltaController) return;
 
-  console.log('Setting up Timeline V2 controls...');
+  console.log('Setting up Timeline controls...');
 
   // Track if this is the first commit (to reset camera only once)
   // Note: Set to false because initial camera reset is handled by visualize(firstTree) call above
@@ -1304,7 +1286,7 @@ function setupTimelineV2Controls() {
       pathToFileIndex = buildPathIndex(tree);
       timings.pathIndex = performance.now() - t1;
 
-      // Render ghosts for deleted files AFTER visualize (Timeline V2 only)
+      // Render ghosts for deleted files AFTER visualize (Timeline only)
       if (commit.changes.filesDeleted.length > 0 && prevTree) {
         const t2 = performance.now();
         currentVisualizer.renderDeletedFiles(commit.changes.filesDeleted, prevTree);
@@ -1369,7 +1351,7 @@ function setupTimelineV2Controls() {
 
     // Update timeline UI
     const t5 = performance.now();
-    updateTimelineV2UI(index);
+    updateTimelineUI(index);
     timings.ui = performance.now() - t5;
 
     // Log performance metrics (only for slow commits)
@@ -1467,13 +1449,13 @@ function setupTimelineV2Controls() {
   }
 
   // Initialize UI
-  updateTimelineV2UI(0);
+  updateTimelineUI(0);
 }
 
 /**
- * Update Timeline V2 UI elements
+ * Update Timeline UI elements
  */
-function updateTimelineV2UI(index: number) {
+function updateTimelineUI(index: number) {
   if (!currentDeltaController) return;
 
   const currentEl = document.getElementById('timeline-commit-index');
@@ -1777,10 +1759,10 @@ async function loadRepository(repoName: string) {
     const format = detectDataFormat(data);
     const extractedSnapshot = extractSnapshot(data, format);
 
-    if (format === 'timeline-v2') {
-      // Timeline V2: Full delta format - need to handle specially
-      console.log('🎬 Timeline V2 (Full Delta) format detected');
-      await loadTimelineV2(data as TimelineDataV2, fileToLoad);
+    if (format === 'timeline') {
+      // Timeline: Full delta format - need to handle specially
+      console.log('🎬 Timeline (Full Delta) format detected');
+      await loadTimeline(data as TimelineDataV2, fileToLoad);
       return; // Early return - V2 uses different loading path
     } else if (format === 'timeline-v1') {
       // Timeline V1: Sampled format
@@ -1843,7 +1825,7 @@ async function loadRepository(repoName: string) {
       if (currentTimelineData) {
         timelineControls.style.display = 'flex';
         // Set up timeline controls (only once per load)
-        setupTimelineControls();
+        setupTimelineV1Controls();
         // Set up tag navigation (will hide UI for V1 since it doesn't support tags)
         setupTagNavigation();
         // Enable Timeline V1 mode UI (limit color options, hide incompatible features)
@@ -2079,21 +2061,18 @@ async function main() {
   }
 
   // Set up label toggle (after first repo loads so currentVisualizer exists)
-  const labelToggle = document.getElementById('label-toggle') as HTMLButtonElement;
+  const labelToggle = document.getElementById('label-toggle') as HTMLInputElement;
   if (labelToggle) {
-    // Load saved preference from localStorage, default to 'hover'
+    // Load saved preference from localStorage, default to 'hover' (unchecked)
     const savedMode = localStorage.getItem('labelMode') as 'always' | 'hover' | null;
     const initialMode = savedMode || 'hover';
 
-    // Set button text to match saved mode
-    labelToggle.textContent = initialMode === 'always' ? 'Always On' : 'Hover Only';
+    // Set checkbox to match saved mode (checked = always, unchecked = hover)
+    labelToggle.checked = initialMode === 'always';
 
     // Handle toggle clicks
-    labelToggle.addEventListener('click', () => {
-      const currentMode = labelToggle.textContent === 'Always On' ? 'always' : 'hover';
-      const newMode = currentMode === 'always' ? 'hover' : 'always';
-
-      labelToggle.textContent = newMode === 'always' ? 'Always On' : 'Hover Only';
+    labelToggle.addEventListener('change', () => {
+      const newMode = labelToggle.checked ? 'always' : 'hover';
       localStorage.setItem('labelMode', newMode);
 
       if (currentVisualizer) {
@@ -2103,21 +2082,18 @@ async function main() {
   }
 
   // Set up view mode toggle (HEAD view only - navigate vs overview)
-  const viewModeToggle = document.getElementById('view-mode-toggle') as HTMLButtonElement;
+  const viewModeToggle = document.getElementById('view-mode-toggle') as HTMLInputElement;
   if (viewModeToggle) {
-    // Load saved preference from localStorage, default to 'navigate'
+    // Load saved preference from localStorage, default to 'navigate' (unchecked)
     const savedViewMode = localStorage.getItem('viewMode') as 'navigate' | 'overview' | null;
     const initialViewMode = savedViewMode || 'navigate';
 
-    // Set button text to match saved mode
-    viewModeToggle.textContent = initialViewMode === 'navigate' ? 'Navigate' : 'Overview';
+    // Set checkbox to match saved mode (checked = overview, unchecked = navigate)
+    viewModeToggle.checked = initialViewMode === 'overview';
 
     // Handle toggle clicks
-    viewModeToggle.addEventListener('click', () => {
-      const currentMode = viewModeToggle.textContent === 'Navigate' ? 'navigate' : 'overview';
-      const newMode = currentMode === 'navigate' ? 'overview' : 'navigate';
-
-      viewModeToggle.textContent = newMode === 'navigate' ? 'Navigate' : 'Overview';
+    viewModeToggle.addEventListener('change', () => {
+      const newMode = viewModeToggle.checked ? 'overview' : 'navigate';
       localStorage.setItem('viewMode', newMode);
 
       if (currentVisualizer) {
@@ -2129,19 +2105,18 @@ async function main() {
   }
 
   // Set up highlight commit toggle
-  const highlightCommitToggle = document.getElementById('highlight-commit-toggle') as HTMLButtonElement;
+  const highlightCommitToggle = document.getElementById('highlight-commit-toggle') as HTMLInputElement;
   if (highlightCommitToggle) {
     // Load saved preference from localStorage, default to true if not set
     const savedHighlightCommit = localStorage.getItem('highlightCommit');
     highlightCommitEnabled = savedHighlightCommit !== null ? savedHighlightCommit === 'true' : true;
 
-    // Set button text to match saved mode
-    highlightCommitToggle.textContent = highlightCommitEnabled ? 'On' : 'Off';
+    // Set checkbox to match saved mode
+    highlightCommitToggle.checked = highlightCommitEnabled;
 
     // Handle toggle clicks
-    highlightCommitToggle.addEventListener('click', () => {
-      highlightCommitEnabled = !highlightCommitEnabled;
-      highlightCommitToggle.textContent = highlightCommitEnabled ? 'On' : 'Off';
+    highlightCommitToggle.addEventListener('change', () => {
+      highlightCommitEnabled = highlightCommitToggle.checked;
       localStorage.setItem('highlightCommit', highlightCommitEnabled.toString());
 
       // Clear any existing commit highlighting when toggled off
@@ -2155,38 +2130,50 @@ async function main() {
   }
 
   // Set up theme toggle
-  const themeToggle = document.getElementById('theme-toggle');
-  if (themeToggle) {
+  const themeToggleContainer = document.getElementById('theme-toggle-container');
+  const sunIcon = document.getElementById('sun-icon');
+  const moonIcon = document.getElementById('moon-icon');
+
+  if (themeToggleContainer && sunIcon && moonIcon) {
     // Load saved theme or default to dark
     const savedTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', savedTheme);
-    updateThemeButton(savedTheme);
+
+    // Set icon based on theme (show what you'll switch TO - sun when dark, moon when light)
+    if (savedTheme === 'dark') {
+      sunIcon.style.display = 'block';
+      moonIcon.style.display = 'none';
+    } else {
+      sunIcon.style.display = 'none';
+      moonIcon.style.display = 'block';
+    }
 
     // Apply initial theme to current visualizer if it exists
     if (currentVisualizer) {
       currentVisualizer.setTheme(savedTheme as 'light' | 'dark');
     }
 
-    themeToggle.addEventListener('click', () => {
+    themeToggleContainer.addEventListener('click', () => {
       const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
       document.documentElement.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
-      updateThemeButton(newTheme);
+
+      // Toggle icon visibility
+      if (newTheme === 'dark') {
+        sunIcon.style.display = 'block';
+        moonIcon.style.display = 'none';
+      } else {
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'block';
+      }
 
       // Update 3D scene colors
       if (currentVisualizer) {
         currentVisualizer.setTheme(newTheme as 'light' | 'dark');
       }
     });
-  }
-
-  function updateThemeButton(theme: string) {
-    const themeToggle = document.getElementById('theme-toggle');
-    if (themeToggle) {
-      themeToggle.textContent = theme === 'dark' ? '☀️ Light' : '🌙 Dark';
-    }
   }
 
   // Set up hide generated files checkbox
@@ -2222,6 +2209,20 @@ async function main() {
       infoPanel.classList.toggle('collapsed');
     });
   }
+
+  // Set up header section collapse
+  const setupSectionCollapse = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    const sectionTitle = section?.querySelector('.section-title.collapsible');
+    if (sectionTitle && section) {
+      sectionTitle.addEventListener('click', () => {
+        section.classList.toggle('collapsed');
+      });
+    }
+  };
+
+  setupSectionCollapse('visualization-section');
+  setupSectionCollapse('display-options-section');
 
   // Set up filter control buttons
   const filterTopBtn = document.getElementById('filter-top-btn');
@@ -2596,9 +2597,9 @@ function updateLegendForColorMode(mode: ColorMode) {
 }
 
 /**
- * Timeline playback functions
+ * Timeline playback functions (V1 format - deprecated)
  */
-function updateTimelineUI() {
+function updateTimelineV1UI() {
   if (!currentTimelineData) return;
 
   const commits = currentTimelineData.timeline.baseSampling.commits;
@@ -2634,7 +2635,7 @@ function updateTimelineUI() {
 function highlightTimelineCommitFiles(commit: any, commitIndex?: number) {
   if (!currentVisualizer) return;
 
-  // Timeline V2 (full delta) vs V1 (sampled) have different highlighting semantics
+  // Timeline (full delta) vs V1 (sampled) have different highlighting semantics
   const isTimelineV2 = currentDeltaController !== null;
 
   // Calculate changes
@@ -2681,7 +2682,7 @@ function highlightTimelineCommitFiles(commit: any, commitIndex?: number) {
       // Should have found additions/modifications/deletions but didn't - unexpected!
       currentVisualizer.clearHighlight();
       showTimelineWarning(`⚠️ Cannot highlight ${totalChanges} change(s)`);
-      console.warn(`Timeline V2: Failed to find ${totalChanges} file changes`);
+      console.warn(`Timeline: Failed to find ${totalChanges} file changes`);
     } else if (changedFiles.length < nonGhostChanges) {
       // Found some but not all additions/modifications - partial highlighting
       const addedPaths = addedFiles.map(f => f.path);
@@ -2752,7 +2753,7 @@ function stepForward() {
   const commits = currentTimelineData.timeline.baseSampling.commits;
   if (timelineIndex < commits.length - 1) {
     timelineIndex++;
-    updateTimelineUI();
+    updateTimelineV1UI();
   }
 }
 
@@ -2761,7 +2762,7 @@ function stepBackward() {
 
   if (timelineIndex > 0) {
     timelineIndex--;
-    updateTimelineUI();
+    updateTimelineV1UI();
   }
 }
 
@@ -2769,7 +2770,7 @@ function goToStart() {
   if (!currentTimelineData) return;
 
   timelineIndex = 0;
-  updateTimelineUI();
+  updateTimelineV1UI();
 }
 
 function togglePlayPause() {
@@ -2815,10 +2816,10 @@ function seekTimeline(percentage: number) {
   const commits = currentTimelineData.timeline.baseSampling.commits;
   const newIndex = Math.floor((percentage / 100) * commits.length);
   timelineIndex = Math.max(0, Math.min(newIndex, commits.length - 1));
-  updateTimelineUI();
+  updateTimelineV1UI();
 }
 
-function setupTimelineControls() {
+function setupTimelineV1Controls() {
   if (!currentTimelineData) return;
 
   // Initialize UI
@@ -2877,7 +2878,7 @@ function setupTimelineControls() {
 
   // Set initial state
   timelineIndex = 0;
-  updateTimelineUI();
+  updateTimelineV1UI();
 }
 
 // Start the application

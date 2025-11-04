@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.8.0] - 2025-11-04
+
+- Modern UI redesign with cleaner visual hierarchy and improved spacing
+- iOS-style toggle switches replacing checkboxes for all binary controls
+- Collapsible header sections (Visualization and Display Options) with smooth animations
+- SVG-based theme toggle in top-right corner (sun/moon icons)
+- Improved control layout with better grouping and consistent styling
+- Enhanced button and input styling with better hover states and focus indicators
+- Visualization mode options moved under Visualization section for better organization
+- All display options now use consistent toggle switch pattern
+- Responsive design improvements with proper wrapping and spacing
+- Light and dark mode refinements with better contrast and border visibility
+
 ## [0.7.0] - 2025-11-01
 
 - API discoverability improvements with HATEOAS links in all responses
