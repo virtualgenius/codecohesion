@@ -1,0 +1,5310 @@
+main.ts:1177 Loading repository: gource
+main.ts:1197 Static snapshot format detected
+main.ts:1204 Data loaded: {repositoryPath: '/Users/paul/Documents/Gource', commit: '1b4e37d71506e6ad19f15190907852978507fc6a', timestamp: '2025-08-13T13:56:09+12:00', author: 'Andrew Caudwell', message: 'Fixed build with Boost 1.89.0 by no longer linking boost system.', …}
+main.ts:1208 Built commit index: 65 unique commits
+main.ts:1212 Built path index: 120 files
+main.ts:1217 Calculated last modified intervals from 120 files
+main.ts:1290 Visualization ready!
+main.ts:1177 Loading repository: gource-timeline-full
+main.ts:1185 🎬 Timeline V2 (Full Delta) format detected
+main.ts:754 
+=== LOADING TIMELINE V2 ===
+main.ts:755 Repository: /Users/paul/Documents/Gource
+main.ts:756 Total commits: 988
+main.ts:757 Date range: 2009-09-11 to 2025-08-13
+main.ts:758 Tags: 22
+DeltaReplayController.ts:38 🔨 Generating keyframes for 988 commits...
+DeltaReplayController.ts:57 ✅ Generated 988 keyframes in 109ms
+DeltaReplayController.ts:58 📊 Final tree: 135 files, 24 directories, depth 3
+main.ts:784 
+📋 Loading HEAD snapshot for validation: gource
+DeltaReplayController.ts:284 
+=== VALIDATION RESULTS ===
+DeltaReplayController.ts:285 Built tree: 135 files
+DeltaReplayController.ts:286 HEAD tree: 120 files
+DeltaReplayController.ts:287 Result: ❌ FAIL
+DeltaReplayController.ts:295 Extra 15 files (in built tree but not in HEAD):
+validateFinalTree @ DeltaReplayController.ts:295
+loadTimelineV2 @ main.ts:788
+await in loadTimelineV2
+loadRepository @ main.ts:1186
+await in loadRepository
+(anonymous) @ main.ts:1334
+DeltaReplayController.ts:296 (10) ['"tests/images/\\303\\201rv\\303\\255zt\\305\\261r\\305\\22…03\\274k\\303\\266rf\\303\\272r\\303\\263g\\303\\251p.png"', 'CNAME', 'css/bootstrap.css', 'css/bootstrap.css.map', 'css/bootstrap.min.css', 'css/site.css', 'dev/bin/cross-compile.sh', 'images/gource-git.jpg', 'images/gource-linux.jpg', 'images/gource-papervision.jpg']
+validateFinalTree @ DeltaReplayController.ts:296
+loadTimelineV2 @ main.ts:788
+await in loadTimelineV2
+loadRepository @ main.ts:1186
+await in loadRepository
+(anonymous) @ main.ts:1334
+main.ts:791 
+❌ VALIDATION FAILED!
+loadTimelineV2 @ main.ts:791
+await in loadTimelineV2
+loadRepository @ main.ts:1186
+await in loadRepository
+(anonymous) @ main.ts:1334
+main.ts:792 Missing files: []
+loadTimelineV2 @ main.ts:792
+await in loadTimelineV2
+loadRepository @ main.ts:1186
+await in loadRepository
+(anonymous) @ main.ts:1334
+main.ts:793 Extra files: (10) ['"tests/images/\\303\\201rv\\303\\255zt\\305\\261r\\305\\22…03\\274k\\303\\266rf\\303\\272r\\303\\263g\\303\\251p.png"', 'CNAME', 'css/bootstrap.css', 'css/bootstrap.css.map', 'css/bootstrap.min.css', 'css/site.css', 'dev/bin/cross-compile.sh', 'images/gource-git.jpg', 'images/gource-linux.jpg', 'images/gource-papervision.jpg']
+loadTimelineV2 @ main.ts:793
+await in loadTimelineV2
+loadRepository @ main.ts:1186
+await in loadRepository
+(anonymous) @ main.ts:1334
+main.ts:948 Setting up Timeline V2 controls...
+main.ts:928 
+✅ Timeline V2 loaded successfully!
+
+TreeVisualizer.ts:1292 Ghost rendering: Could not find deleted file in prev tree: m4/acx_pthread.m4
+renderDeletionGhosts @ TreeVisualizer.ts:1292
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/.gitignore
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/bounds.h
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/camera.cpp
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/camera.h
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/conffile.cpp
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/conffile.h
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/display.cpp
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/display.h
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/extensions.cpp
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/extensions.h
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/frustum.cpp
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/frustum.h
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/fxfont.cpp
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/fxfont.h
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/logger.cpp
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/logger.h
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/pi.h
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/plane.cpp
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/plane.h
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/quadtree.cpp
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/quadtree.h
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/regex.cpp
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/regex.h
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/resource.cpp
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/resource.h
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/sdlapp.cpp
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/sdlapp.h
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/seeklog.cpp
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/seeklog.h
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/settings.cpp
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/settings.h
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/stringhash.cpp
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/stringhash.h
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/texture.cpp
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/texture.h
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/utf8/checked.h
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/utf8/core.h
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/utf8/unchecked.h
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/utf8/utf8.h
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: src/core/vectors.h
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: debian/changelog
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: debian/compat
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: debian/control
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: debian/copyright
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: debian/dirs
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: debian/docs
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: debian/rules
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+TreeVisualizer.ts:1315 Ghost rendering: Could not find parent directory for: "tests/logs/\303\241rv\303\255zt\305\261r\305\221 t\303\274k\303\266rf\303\272r\303\263g\303\251p.log"
+renderDeletionGhosts @ TreeVisualizer.ts:1315
+renderDeletedFiles @ TreeVisualizer.ts:1408
+(anonymous) @ main.ts:978
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+main.ts:1052 ⚠️ Slow commit 835: visualize=165.5ms, pathIndex=0.0ms, stats=0.5ms, highlight=0.5ms, ui=0.1ms, total=166.6ms
+(anonymous) @ main.ts:1052
+(anonymous) @ DeltaReplayController.ts:357
+emit @ DeltaReplayController.ts:355
+emitCommitEvent @ DeltaReplayController.ts:243
+playLoop @ DeltaReplayController.ts:136
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139
+setTimeout
+playLoop @ DeltaReplayController.ts:139
+(anonymous) @ DeltaReplayController.ts:139

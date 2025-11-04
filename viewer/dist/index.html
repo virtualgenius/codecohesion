@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive 3D code cohesion visualization with timeline evolution">
+  <meta name="keywords" content="code cohesion, architecture visualization, DDD, bounded contexts, temporal coupling">
+  <title>CodeCohesion</title>
+  <style>
+    :root {
+      /* Dark mode colors (default) */
+      --bg-primary: #1a1a1a;
+      --bg-panel: rgba(0, 0, 0, 0.7);
+      --bg-panel-solid: #1a1a1a;
+      --text-primary: #ffffff;
+      --text-secondary: #aaa;
+      --text-muted: #888;
+      --text-light: #ccc;
+      --text-lighter: #ddd;
+      --accent-primary: #4a9eff;
+      --accent-hover: rgba(74, 158, 255, 0.4);
+      --accent-active: rgba(74, 158, 255, 0.6);
+      --border-color: rgba(255, 255, 255, 0.1);
+      --border-subtle: rgba(255, 255, 255, 0.05);
+      --border-default: rgba(255, 255, 255, 0.2);
+      --border-accent: rgba(74, 158, 255, 0.3);
+      --warning-color: #ffaa00;
+      --warning-bg: rgba(0, 0, 0, 0.9);
+      --button-bg: rgba(74, 158, 255, 0.2);
+      --button-hover: rgba(74, 158, 255, 0.4);
+      --input-bg: rgba(255, 255, 255, 0.1);
+      --input-focus: rgba(74, 158, 255, 0.1);
+      --hover-bg: rgba(255, 255, 255, 0.05);
+      --shadow: rgba(0, 0, 0, 0.6);
+      --tag-marker: #ffaa00;
+      --tag-marker-hover: #ffdd44;
+      --scrollbar-track: rgba(255, 255, 255, 0.05);
+      --scrollbar-thumb: rgba(74, 158, 255, 0.4);
+      --scrollbar-thumb-hover: rgba(74, 158, 255, 0.6);
+    }
+
+    [data-theme="light"] {
+      /* Light mode colors */
+      --bg-primary: #f5f5f5;
+      --bg-panel: rgba(255, 255, 255, 0.9);
+      --bg-panel-solid: #ffffff;
+      --text-primary: #1a1a1a;
+      --text-secondary: #555;
+      --text-muted: #777;
+      --text-light: #333;
+      --text-lighter: #222;
+      --accent-primary: #2563eb;
+      --accent-hover: rgba(37, 99, 235, 0.2);
+      --accent-active: rgba(37, 99, 235, 0.3);
+      --border-color: rgba(0, 0, 0, 0.1);
+      --border-subtle: rgba(0, 0, 0, 0.05);
+      --border-default: rgba(0, 0, 0, 0.2);
+      --border-accent: rgba(37, 99, 235, 0.3);
+      --warning-color: #d97706;
+      --warning-bg: rgba(255, 255, 255, 0.95);
+      --button-bg: rgba(37, 99, 235, 0.1);
+      --button-hover: rgba(37, 99, 235, 0.2);
+      --input-bg: rgba(0, 0, 0, 0.05);
+      --input-focus: rgba(37, 99, 235, 0.1);
+      --hover-bg: rgba(0, 0, 0, 0.03);
+      --shadow: rgba(0, 0, 0, 0.15);
+      --tag-marker: #d97706;
+      --tag-marker-hover: #f59e0b;
+      --scrollbar-track: rgba(0, 0, 0, 0.05);
+      --scrollbar-thumb: rgba(37, 99, 235, 0.3);
+      --scrollbar-thumb-hover: rgba(37, 99, 235, 0.5);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      overflow: hidden;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    #container {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    }
+
+    #canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    #ui {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    #header {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: var(--bg-panel);
+      padding: 20px;
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      pointer-events: auto;
+      transition: background-color 0.3s ease;
+      max-width: 580px;
+      box-shadow: 0 4px 16px var(--shadow);
+    }
+
+    #header h1 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    #header p {
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin: 2px 0 0 0;
+    }
+
+    .header-section {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .header-section:first-of-type {
+      margin-top: 12px;
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .header-section.collapsed .section-content {
+      display: none;
+    }
+
+    .section-title {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+
+    .section-title:hover {
+      color: var(--text-secondary);
+    }
+
+    .section-title.collapsible::after {
+      content: '▼';
+      font-size: 10px;
+      transition: transform 0.2s;
+      color: var(--accent-primary);
+    }
+
+    .header-section.collapsed .section-title.collapsible::after {
+      transform: rotate(-90deg);
+    }
+
+    .header-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .header-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .control-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .control-label {
+      font-size: 13px;
+      color: var(--text-secondary);
+      white-space: nowrap;
+      font-weight: 500;
+    }
+
+    #header select {
+      padding: 6px 12px;
+      background: var(--input-bg);
+      color: var(--text-primary);
+      border: 1px solid var(--border-default);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      transition: all 0.2s ease;
+      min-width: 140px;
+    }
+
+    #header select:hover {
+      border-color: var(--accent-primary);
+      background: var(--input-focus);
+    }
+
+    #header select:focus {
+      outline: none;
+      border-color: var(--accent-primary);
+      background: var(--input-focus);
+      box-shadow: 0 0 0 3px var(--accent-hover);
+    }
+
+    #header button {
+      padding: 6px 14px;
+      background: var(--button-bg);
+      color: var(--text-primary);
+      border: 1px solid var(--border-default);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    #header button:hover {
+      background: var(--button-hover);
+      border-color: var(--accent-primary);
+      box-shadow: 0 2px 4px var(--shadow);
+    }
+
+    #header button:active {
+      transform: translateY(1px);
+    }
+
+    #theme-toggle-container {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      pointer-events: auto;
+      cursor: pointer;
+      user-select: none;
+      width: 24px;
+      height: 24px;
+      opacity: 0.7;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    #theme-toggle-container:hover {
+      opacity: 1;
+      transform: scale(1.15);
+    }
+
+    #theme-toggle-container:active {
+      transform: scale(0.9);
+    }
+
+    #theme-icon {
+      width: 100%;
+      height: 100%;
+      display: block;
+      fill: var(--text-primary);
+    }
+
+    /* Toggle Switch Styling */
+    .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 44px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .toggle-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--border-default);
+      transition: all 0.3s ease;
+      border-radius: 24px;
+      border: 2px solid var(--border-color);
+    }
+
+    .toggle-slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 2px;
+      bottom: 2px;
+      background-color: var(--text-primary);
+      transition: all 0.3s ease;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .toggle-switch input:checked + .toggle-slider {
+      background-color: var(--accent-primary);
+      border-color: var(--accent-primary);
+    }
+
+    .toggle-switch input:checked + .toggle-slider:before {
+      transform: translateX(20px);
+      background-color: white;
+    }
+
+    .toggle-switch input:disabled + .toggle-slider {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .toggle-switch:hover input:not(:disabled) + .toggle-slider {
+      box-shadow: 0 0 0 3px var(--accent-hover);
+    }
+
+    .toggle-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      font-size: 13px;
+      color: var(--text-secondary);
+      font-weight: 500;
+      user-select: none;
+    }
+
+    .toggle-label:hover {
+      color: var(--text-primary);
+    }
+
+    .toggle-label input:disabled ~ span {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    #header input[type="radio"] {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      accent-color: var(--accent-primary);
+      margin: 0;
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 16px;
+    }
+
+    .radio-option {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .radio-option:hover {
+      color: var(--text-primary);
+    }
+
+    #repo-selector {
+      width: 100%;
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+
+    #repo-github-link {
+      display: inline-flex;
+      font-size: 12px;
+      color: var(--accent-primary);
+      text-decoration: none;
+      align-items: center;
+      gap: 4px;
+      margin-top: 6px;
+      transition: color 0.2s ease;
+    }
+
+    #repo-github-link:hover {
+      color: var(--text-primary);
+    }
+
+    #info-panel {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--bg-panel);
+      padding: 15px 20px;
+      border-radius: 8px;
+      backdrop-filter: blur(10px);
+      min-width: 250px;
+      max-width: 400px;
+      max-height: calc(100vh - 40px);
+      pointer-events: auto;
+      display: none;
+      overflow: hidden;
+      transition: background-color 0.3s ease;
+    }
+
+    #info-panel.visible {
+      display: block;
+    }
+
+    #info-panel.collapsed {
+      max-height: 40px;
+      overflow: hidden;
+    }
+
+    #info-panel h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--accent-primary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #info-panel h3::after {
+      content: '▼';
+      font-size: 10px;
+      transition: transform 0.2s;
+    }
+
+    #info-panel.collapsed h3::after {
+      transform: rotate(-90deg);
+    }
+
+    #info-panel .info-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      margin: 5px 0;
+      padding: 5px 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    #info-panel .info-row:last-child {
+      border-bottom: none;
+    }
+
+    #info-panel .label {
+      color: var(--text-muted);
+    }
+
+    #info-panel .value {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    #info-content {
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+    }
+
+    #loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: 16px;
+    }
+
+    #loading.hidden {
+      display: none;
+    }
+
+    .spinner {
+      border: 3px solid var(--border-subtle);
+      border-top: 3px solid var(--accent-primary);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 15px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    #controls {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg-panel);
+      padding: 10px 15px;
+      border-radius: 8px;
+      backdrop-filter: blur(10px);
+      pointer-events: auto;
+      font-size: 12px;
+      color: var(--text-secondary);
+      transition: background-color 0.3s ease;
+    }
+
+    #timeline-controls {
+      position: absolute;
+      bottom: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg-panel);
+      padding: 15px 20px;
+      border-radius: 8px;
+      backdrop-filter: blur(10px);
+      pointer-events: auto;
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      min-width: 600px;
+      transition: background-color 0.3s ease;
+    }
+
+    #timeline-controls .timeline-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    #timeline-controls button {
+      padding: 6px 12px;
+      background: var(--button-bg);
+      color: var(--text-primary);
+      border: 1px solid var(--accent-primary);
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      transition: background 0.2s;
+    }
+
+    #timeline-controls button:hover {
+      background: var(--button-hover);
+    }
+
+    #timeline-controls button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    #timeline-scrubber {
+      flex: 1;
+      height: 6px;
+      background: var(--border-subtle);
+      border-radius: 3px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    #timeline-progress {
+      height: 100%;
+      background: var(--accent-primary);
+      border-radius: 3px;
+      position: relative;
+      transition: width 0.1s linear;
+    }
+
+    #timeline-progress::after {
+      content: '';
+      position: absolute;
+      right: -6px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 12px;
+      background: var(--accent-primary);
+      border-radius: 50%;
+      border: 2px solid var(--text-primary);
+    }
+
+    #tag-markers {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .tag-marker {
+      position: absolute;
+      top: -3px;
+      width: 2px;
+      height: calc(100% + 6px);
+      background: var(--tag-marker);
+      cursor: pointer;
+      pointer-events: auto;
+      transition: background 0.2s, width 0.2s;
+    }
+
+    .tag-marker:hover {
+      background: var(--tag-marker-hover);
+      width: 3px;
+    }
+
+    .tag-marker::after {
+      content: attr(data-tag);
+      position: absolute;
+      bottom: calc(100% + 4px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg-panel);
+      color: var(--tag-marker);
+      padding: 4px 8px;
+      border-radius: 3px;
+      font-size: 10px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+      border: 1px solid var(--tag-marker);
+    }
+
+    .tag-marker:hover::after {
+      opacity: 1;
+    }
+
+    /* 3D Floating Cluster Details Card */
+    .cluster-details-card {
+      background: var(--bg-panel);
+      border: 1px solid var(--accent-primary);
+      border-radius: 6px;
+      padding: 12px 14px;
+      min-width: 280px;
+      max-width: 350px;
+      max-height: 400px;
+      overflow-y: auto;
+      pointer-events: auto;
+      font-family: monospace;
+      box-shadow: 0 4px 12px var(--shadow);
+      backdrop-filter: blur(8px);
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .cluster-details-card h4 {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent-primary);
+      margin: 0 0 8px 0;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border-accent);
+    }
+
+    .cluster-details-card .cluster-name {
+      font-size: 11px;
+      color: var(--text-secondary);
+      margin-bottom: 10px;
+    }
+
+    .cluster-details-card .file-list {
+      font-size: 11px;
+    }
+
+    .cluster-details-card .file-item {
+      padding: 5px 0;
+      color: var(--text-secondary);
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cluster-details-card .file-item:last-child {
+      border-bottom: none;
+    }
+
+    .cluster-details-card .file-name {
+      color: var(--text-secondary);
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .cluster-details-card .coupling-strength {
+      color: var(--text-muted);
+      font-size: 10px;
+      margin-left: 8px;
+      white-space: nowrap;
+    }
+
+    /* Scrollbar styling for cluster card */
+    .cluster-details-card::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .cluster-details-card::-webkit-scrollbar-track {
+      background: var(--scrollbar-track);
+      border-radius: 3px;
+    }
+
+    .cluster-details-card::-webkit-scrollbar-thumb {
+      background: var(--scrollbar-thumb);
+      border-radius: 3px;
+    }
+
+    .cluster-details-card::-webkit-scrollbar-thumb:hover {
+      background: var(--scrollbar-thumb-hover);
+    }
+
+    #timeline-info {
+      color: var(--text-secondary);
+      font-size: 11px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
+
+    #jump-to-commit {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    #jump-to-commit input {
+      width: 60px;
+      padding: 2px 6px;
+      background: var(--input-bg);
+      border: 1px solid var(--border-default);
+      border-radius: 3px;
+      color: var(--text-primary);
+      font-size: 11px;
+      text-align: center;
+    }
+
+    #jump-to-commit input:focus {
+      outline: none;
+      border-color: var(--accent-primary);
+      background: var(--input-focus);
+    }
+
+    #jump-to-commit button {
+      padding: 2px 8px;
+      background: var(--button-bg);
+      color: var(--text-primary);
+      border: 1px solid var(--accent-primary);
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 10px;
+      transition: background 0.2s;
+    }
+
+    #jump-to-commit button:hover {
+      background: var(--button-hover);
+    }
+
+    #legend {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: var(--bg-panel);
+      padding: 15px 20px;
+      border-radius: 8px;
+      backdrop-filter: blur(10px);
+      pointer-events: auto;
+      min-width: 200px;
+      max-height: 400px;
+      overflow-y: auto;
+      transition: background-color 0.3s ease;
+    }
+
+    #legend.collapsed {
+      max-height: 40px;
+      overflow: hidden;
+    }
+
+    #legend h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--accent-primary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #legend h3::after {
+      content: '▼';
+      font-size: 10px;
+      transition: transform 0.2s;
+    }
+
+    #legend.collapsed h3::after {
+      transform: rotate(-90deg);
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      font-size: 11px;
+      margin: 5px 0;
+      padding: 3px 0;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .legend-item:hover {
+      background: var(--hover-bg);
+      border-radius: 3px;
+    }
+
+    .legend-checkbox {
+      margin-right: 8px;
+      cursor: pointer;
+      flex-shrink: 0;
+      width: 14px;
+      height: 14px;
+    }
+
+    .legend-color {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin-right: 10px;
+      flex-shrink: 0;
+      border: 1px solid var(--border-default);
+    }
+
+    .legend-cube {
+      width: 16px;
+      height: 16px;
+      margin-right: 10px;
+      flex-shrink: 0;
+      border: 1px solid var(--border-default);
+    }
+
+    .legend-label {
+      color: var(--text-secondary);
+    }
+
+    .legend-item.unchecked .legend-label {
+      color: var(--text-muted);
+      text-decoration: line-through;
+    }
+
+    .legend-item.unchecked .legend-color,
+    .legend-item.unchecked .legend-cube {
+      opacity: 0.3;
+    }
+
+    .filter-controls {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .filter-controls button {
+      padding: 3px 8px;
+      background: var(--button-bg);
+      color: var(--text-primary);
+      border: 1px solid var(--accent-primary);
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 10px;
+      transition: background 0.2s;
+      flex: 1;
+    }
+
+    .filter-controls button:hover {
+      background: var(--button-hover);
+    }
+
+    .filter-controls button:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+    #filter-status {
+      font-size: 10px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    #tooltip {
+      position: absolute;
+      background: var(--bg-panel);
+      color: var(--text-primary);
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      pointer-events: none;
+      display: none;
+      z-index: 1000;
+      white-space: nowrap;
+      border: 1px solid var(--border-default);
+    }
+
+    #stats-panel {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: var(--bg-panel);
+      padding: 15px 20px;
+      border-radius: 8px;
+      backdrop-filter: blur(10px);
+      pointer-events: auto;
+      min-width: 200px;
+      max-height: 500px;
+      overflow-y: auto;
+      transition: background-color 0.3s ease;
+    }
+
+    #stats-panel.collapsed {
+      max-height: 40px;
+      overflow: hidden;
+    }
+
+    #stats-panel h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--accent-primary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #stats-panel h3::after {
+      content: '▼';
+      font-size: 10px;
+      transition: transform 0.2s;
+    }
+
+    #stats-panel.collapsed h3::after {
+      transform: rotate(-90deg);
+    }
+
+    #stats-panel .stat-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      margin: 5px 0;
+      padding: 3px 0;
+    }
+
+    #stats-panel .stat-label {
+      color: var(--text-muted);
+    }
+
+    #stats-panel .stat-value {
+      color: var(--text-primary);
+      font-weight: 500;
+      font-family: monospace;
+    }
+
+    #stats-panel .stat-bar {
+      margin: 6px 0;
+    }
+
+    #stats-panel .stat-bar-label {
+      font-size: 10px;
+      color: var(--text-secondary);
+      margin-bottom: 2px;
+    }
+
+    #stats-panel .stat-bar-fill {
+      height: 14px;
+      border-radius: 3px;
+      position: relative;
+      overflow: hidden;
+      background: var(--border-subtle);
+    }
+
+    #stats-panel .stat-bar-fill-inner {
+      height: 100%;
+      transition: width 0.3s ease;
+      display: flex;
+      align-items: center;
+      padding-left: 4px;
+    }
+
+    #stats-panel .stat-bar-text {
+      font-size: 9px;
+      color: white;
+      font-weight: bold;
+      text-shadow: 0 0 2px black;
+    }
+  </style>
+  <script type="module" crossorigin src="/codecohesion/assets/index-D4xG48vr.js"></script>
+</head>
+<body>
+  <div id="container">
+    <canvas id="canvas"></canvas>
+
+    <div id="ui">
+      <!-- Theme Toggle (Top Right) -->
+      <div id="theme-toggle-container" title="Toggle light/dark mode">
+        <svg id="theme-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Sun icon (default) -->
+          <g id="sun-icon">
+            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </g>
+          <!-- Moon icon -->
+          <g id="moon-icon" style="display: none;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" fill="none"/>
+          </g>
+        </svg>
+      </div>
+
+      <div id="header">
+        <!-- Title -->
+        <div style="margin-bottom: 12px;">
+          <h1>CodeCohesion</h1>
+          <p>Visualizing Code Evolution</p>
+        </div>
+
+        <!-- Repository Section -->
+        <div class="header-section">
+          <select id="repo-selector">
+            <option value="">Loading repositories...</option>
+          </select>
+          <a id="repo-github-link" href="" target="_blank">
+            🔗 <span></span>
+          </a>
+        </div>
+
+        <!-- Visualization Settings -->
+        <div class="header-section" id="visualization-section">
+          <div class="section-title collapsible">Visualization</div>
+          <div class="section-content">
+            <!-- Mode Switcher -->
+            <div id="mode-switcher" class="header-row" style="display: none;">
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="view-mode" value="head" checked>
+                <span>HEAD Analysis</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="view-mode" value="timeline">
+                <span>Timeline</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="header-row">
+            <div class="control-group">
+              <label class="control-label">Layout</label>
+              <select id="layout-mode-selector">
+                <option value="hierarchical">3D Hierarchy</option>
+                <option value="forceDirected">Force-Directed 2D</option>
+              </select>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Color by</label>
+              <select id="color-mode-selector">
+                <option value="fileType">File Type</option>
+                <option value="lastModified">Last Modified</option>
+                <option value="author">Author</option>
+                <option value="churn">Churn (Lifetime Commits)</option>
+                <option value="contributors">Contributors (Lifetime)</option>
+                <option value="fileAge">File Age</option>
+                <option value="recentActivity">Recent Activity (90 days)</option>
+                <option value="stability">Code Stability</option>
+                <option value="recency">Recency</option>
+                <option value="linesOfCode">Lines of Code</option>
+              </select>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <!-- Display Options -->
+        <div class="header-section" id="display-options-section">
+          <div class="section-title collapsible">Display Options</div>
+          <div class="section-content">
+            <div class="header-row">
+            <label class="toggle-label">
+              <label class="toggle-switch">
+                <input type="checkbox" id="hide-generated-checkbox">
+                <span class="toggle-slider"></span>
+              </label>
+              <span>Hide generated files</span>
+            </label>
+            <label class="toggle-label">
+              <label class="toggle-switch">
+                <input type="checkbox" id="label-toggle">
+                <span class="toggle-slider"></span>
+              </label>
+              <span>Show labels</span>
+            </label>
+            <label class="toggle-label">
+              <label class="toggle-switch">
+                <input type="checkbox" id="view-mode-toggle">
+                <span class="toggle-slider"></span>
+              </label>
+              <span>Overview mode</span>
+            </label>
+            <label class="toggle-label">
+              <label class="toggle-switch">
+                <input type="checkbox" id="highlight-commit-toggle" checked>
+                <span class="toggle-slider"></span>
+              </label>
+              <span>Highlight commit</span>
+            </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="stats-panel">
+        <h3>Repository Stats</h3>
+        <div id="stats-content">
+          <div class="stat-row">
+            <span class="stat-label">Total Files:</span>
+            <span class="stat-value" id="stat-files">-</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Total LOC:</span>
+            <span class="stat-value" id="stat-loc">-</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Directories:</span>
+            <span class="stat-value" id="stat-dirs">-</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Max Depth:</span>
+            <span class="stat-value" id="stat-depth">-</span>
+          </div>
+          <div id="lang-breakdown"></div>
+        </div>
+      </div>
+
+      <div id="info-panel">
+        <h3 id="selected-name">File Details</h3>
+        <div id="info-content"></div>
+      </div>
+
+      <div id="loading">
+        <div class="spinner"></div>
+        <p>Loading visualization...</p>
+      </div>
+
+      <div id="timeline-controls">
+        <div id="timeline-warning" style="display: none; position: absolute; bottom: 100%; margin-bottom: 10px; left: 0; right: 0; background: rgba(0, 0, 0, 0.8); border: 1px solid rgba(0, 0, 0, 0.9); color: #ffeb99; padding: 8px 12px; border-radius: 4px; font-size: 11px;">
+          <span id="timeline-warning-text"></span>
+        </div>
+        <div class="timeline-row">
+          <button id="go-to-start-btn">|◀ Start</button>
+          <button id="play-pause-btn">▶ Play</button>
+          <button id="step-back-btn">◀ Step</button>
+          <button id="step-forward-btn">Step ▶</button>
+          <label style="font-size: 11px; color: #aaa; margin-left: 10px;">Speed:</label>
+          <select id="speed-selector" style="padding: 4px 8px; background: rgba(255,255,255,0.1); color: white; border: 1px solid #4a9eff; border-radius: 4px; cursor: pointer; font-size: 11px;">
+            <option value="1">1x</option>
+            <option value="10">10x</option>
+            <option value="50" selected>50x</option>
+            <option value="100">100x</option>
+            <option value="500">500x</option>
+            <option value="1000">1000x</option>
+          </select>
+          <span id="tag-selector-container">
+            <label style="font-size: 11px; color: #aaa; margin-left: 15px;">Jump to:</label>
+            <select id="tag-selector" style="padding: 4px 8px; background: rgba(255,255,255,0.1); color: white; border: 1px solid #ffaa00; border-radius: 4px; cursor: pointer; font-size: 11px;">
+              <option value="">-- Select tag --</option>
+            </select>
+          </span>
+        </div>
+        <div class="timeline-row">
+          <div id="timeline-scrubber">
+            <div id="timeline-progress" style="width: 0%"></div>
+            <div id="tag-markers"></div>
+          </div>
+        </div>
+        <div id="timeline-info" style="flex-wrap: wrap;">
+          <span id="timeline-commit-info">Commit <span id="timeline-commit-index">1</span> of <span id="timeline-commit-total">-</span></span>
+          <span id="commit-info" style="color: #ddd; margin-left: 10px;"></span>
+        </div>
+      </div>
+
+      <div id="controls">
+        <strong>Controls:</strong> Left-click + drag to rotate | Right-click + drag to pan | Scroll to zoom | Click nodes for details
+      </div>
+
+      <div id="legend">
+        <h3 id="legend-title">Legend</h3>
+        <div class="filter-controls" id="filter-controls" style="display: none;">
+          <button id="filter-top-btn" title="Show only top category">Top</button>
+          <button id="filter-all-btn" title="Show all categories">All</button>
+          <button id="filter-none-btn" title="Hide all categories">None</button>
+          <button id="filter-invert-btn" title="Invert selection">Invert</button>
+        </div>
+        <div id="legend-content">
+          <!-- Populated dynamically by main.ts -->
+        </div>
+        <div id="filter-status"></div>
+      </div>
+
+      <div id="tooltip"></div>
+    </div>
+  </div>
+
+</body>
+</html>
