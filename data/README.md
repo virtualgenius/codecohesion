@@ -4,11 +4,10 @@
 
 ## 🔒 PROPRIETARY DATA PROTECTION
 
-**NEVER add proprietary Zero repository data to this directory:**
-- ❌ `assessor-svc*` (PROPRIETARY - Zero)
-- ❌ `core-data-svc*` (PROPRIETARY - Zero)
-- ❌ `public-web*` (PROPRIETARY - Zero)
-- ❌ `editor*` (PROPRIETARY - Zero)
+**NEVER add proprietary client repository data to this directory.**
+
+Proprietary repository patterns are configured in `.proprietary-repos.txt` (gitignored).
+The validation script will automatically block any files matching those patterns.
 
 ## ✅ Safe Public Repositories
 
