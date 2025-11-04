@@ -5,7 +5,7 @@
 
 import type { RepositorySnapshot, TimelineData, TimelineDataV2 } from '../types';
 
-export type DataFormat = 'timeline-v2' | 'timeline-v1' | 'static';
+export type DataFormat = 'timeline' | 'timeline-v2' | 'timeline-v1' | 'static';
 
 /**
  * Determine which files to try loading based on mode and timeline availability
@@ -46,13 +46,14 @@ export function determineFileToLoad(
  * @returns The detected format type
  */
 export function detectDataFormat(data: any): DataFormat {
-  if (data && typeof data === 'object' && 'format' in data && data.format === 'timeline-v2') {
-    return 'timeline-v2';
-  } else if (data && typeof data === 'object' && 'format' in data && data.format === 'timeline-v1') {
-    return 'timeline-v1';
-  } else {
-    return 'static';
+  if (data && typeof data === 'object' && 'format' in data) {
+    if (data.format === 'timeline' || data.format === 'timeline-v2') {
+      return 'timeline';
+    } else if (data.format === 'timeline-v1') {
+      return 'timeline-v1';
+    }
   }
+  return 'static';
 }
 
 /**
@@ -67,8 +68,9 @@ export function extractSnapshot(
   format: DataFormat
 ): RepositorySnapshot | null {
   switch (format) {
+    case 'timeline':
     case 'timeline-v2':
-      // V2 uses special loading path - signal to caller with null
+      // Timeline uses special loading path - signal to caller with null
       return null;
     case 'timeline-v1':
       return (data as TimelineData).headSnapshot;
