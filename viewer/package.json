@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build:skip-check": "vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist",
+    "deploy": "./validate-deploy.sh && npm run build:skip-check && gh-pages -d dist",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:ui": "vitest --ui"
