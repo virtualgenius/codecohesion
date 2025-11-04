@@ -9,8 +9,6 @@ cbioportal-frontend-timeline-full.json
 cbioportal-frontend.json
 codecohesion-timeline-full.json
 codecohesion.json
-editor-timeline-full.json
-editor.json
 gource-timeline-full.json
 gource.json
 react-timeline-full.json
@@ -21,8 +19,3 @@ test-generated.json
 
 # Metadata
 repos.json
-
-# NEVER deploy these proprietary files:
-# assessor-svc* (PROPRIETARY - Zero)
-# core-data-svc* (PROPRIETARY - Zero)
-# public-web* (PROPRIETARY - Zero)
