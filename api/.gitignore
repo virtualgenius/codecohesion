@@ -24,5 +24,11 @@ yarn-error.log*
 .vscode/
 .idea/
 
+# Proprietary repo patterns (private config)
+.proprietary-repos.txt
+
+# Data files (local development only - not committed)
+data/*.json
+
 # Keep .gitkeep
 !data/.gitkeep
