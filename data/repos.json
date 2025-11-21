@@ -1,6 +1,5 @@
 {
   "repos": [
-    "test-generated",
     "cbioportal-frontend-timeline-full",
     "cbioportal-frontend",
     "cbioportal-timeline-full",
